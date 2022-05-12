@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220511 23:51:18.602" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify Product Purchase Suite" source="D:\pythonProject1\Products_suite\verify_product_purchase_suite.robot">
+<test id="s1-t1" name="Product purchase test" line="9">
+<kw name="Launch Browser" library="CommonFunctionality" type="SETUP">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220511 23:51:20.755" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\msys64\mingw64\bin;C;C;C:\Program Files\Git\cmd;C:\Users\pavan\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\pavan\AppData\Local\Programs\Python\Python310\;C:\Users\pavan\AppData\Local\Microsoft\WindowsApps;C:\Users\pavan\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;D:\pythonProject1\driver'.</msg>
+<status status="PASS" starttime="20220511 23:51:20.755" endtime="20220511 23:51:20.755"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220511 23:51:20.755" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220511 23:51:20.755" endtime="20220511 23:51:58.714"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220511 23:51:58.714" endtime="20220511 23:52:00.249"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220511 23:52:00.249" endtime="20220511 23:52:00.249"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}screanshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220511 23:52:00.249" endtime="20220511 23:52:00.249"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220511 23:52:00.249" level="INFO">Opening url 'https://signoraware.com/'</msg>
+<status status="PASS" starttime="20220511 23:52:00.249" endtime="20220511 23:53:03.403"/>
+</kw>
+<status status="PASS" starttime="20220511 23:51:20.755" endtime="20220511 23:53:03.404"/>
+</kw>
+<kw name="Valid Login" library="CommonFunctionality">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[text()='Sign In']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220511 23:53:03.425" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg timestamp="20220511 23:53:03.454" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.54)
+</msg>
+<msg timestamp="20220511 23:53:03.461" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.54)
+</msg>
+<status status="FAIL" starttime="20220511 23:53:03.424" endtime="20220511 23:53:04.422"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>masil22830@abincol.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.423" endtime="20220511 23:53:04.423"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=pass</arg>
+<arg>147852369@Aa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.423" endtime="20220511 23:53:04.424"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=send2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.424" endtime="20220511 23:53:04.427"/>
+</kw>
+<status status="FAIL" starttime="20220511 23:53:03.407" endtime="20220511 23:53:04.429"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(),'Home')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.431" endtime="20220511 23:53:04.431"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@title='Stainless Steel Shaker']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.432" endtime="20220511 23:53:04.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//img[@src='https://signoraware.com/media/catalog/product/cache/22f737010c882ae9dc73726ff0a183f9/3/4/3490_1.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.433" endtime="20220511 23:53:04.434"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@id='product-addtocart-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.435" endtime="20220511 23:53:04.435"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//a[text()='Charger Shaker Steel 750 ml']</arg>
+<arg>Charger Shaker Steel 750 ml</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220511 23:53:04.436" endtime="20220511 23:53:04.436"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220511 23:53:04.436" endtime="20220511 23:53:11.395"/>
+</kw>
+<status status="FAIL" starttime="20220511 23:51:20.755" endtime="20220511 23:53:11.395">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.54)
+</status>
+</test>
+<doc>thise suite will handle Invalid credential</doc>
+<status status="FAIL" starttime="20220511 23:51:18.618" endtime="20220511 23:53:11.395"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Verify Product Purchase Suite">Verify Product Purchase Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220511 23:53:03.454" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.54)
+</msg>
+</errors>
+</robot>
