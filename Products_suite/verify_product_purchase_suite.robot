@@ -12,4 +12,7 @@ Product purchase test
     Click Element    xpath=//a[@title='Stainless Steel Shaker']
     Click Element    xpath=//img[@src='https://signoraware.com/media/catalog/product/cache/22f737010c882ae9dc73726ff0a183f9/3/4/3490_1.jpg']
     Click Element    xpath=//button[@id='product-addtocart-button']
-    cli
+    Sleep    15s
+    Click Element    xpath=(//a[@href='https://signoraware.com/checkout/cart/'])[1]
+    Click Element    xpath=(//a[@href='https://signoraware.com/checkout/cart/'])[2]
+    Element Text Should Be    xpath=(//a[text()='Charger Shaker Steel 750 ml'])[2]    Charger Shaker Steel 750 ml
